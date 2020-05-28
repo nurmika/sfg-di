@@ -1,9 +1,6 @@
 package nurmika.sfgdi;
 
-import nurmika.sfgdi.controllers.ConstructorInjectedController;
-import nurmika.sfgdi.controllers.MyController;
-import nurmika.sfgdi.controllers.PropertyInjectedController;
-import nurmika.sfgdi.controllers.SetterInjectedController;
+import nurmika.sfgdi.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -13,6 +10,9 @@ public class SfgDiApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(SfgDiApplication.class, args);
+
+		I18nController i18nController = (I18nController) context.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
 		MyController myController = (MyController) context.getBean("myController");
 
