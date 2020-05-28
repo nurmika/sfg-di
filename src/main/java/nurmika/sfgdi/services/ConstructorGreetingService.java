@@ -3,9 +3,9 @@ package nurmika.sfgdi.services;
 import org.springframework.stereotype.Service;
 
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class ConstructorGreetingService implements GreetingService {
     @Override
     public String sayGreeting() {
-        return "Hallo Welt";
+        return "Hallo Welt - Constructor";
     }
 }
